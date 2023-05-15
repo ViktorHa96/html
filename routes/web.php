@@ -30,6 +30,10 @@ Route::get('/posts', function () {
     return Inertia::render('Posts');
 })->name('posts');
 
+Route::get('/addpost', function () {
+    return Inertia::render('AddPost');
+})->name('addpost');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
